@@ -1,3 +1,7 @@
+# Personal files control
+PR/
+
+# Ruby
 *.gem
 *.rbc
 /.config
