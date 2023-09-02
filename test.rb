@@ -25,8 +25,10 @@ student = Student.new(1, 17, 'John Doe')
 classroom = Classroom.new('A')
 book = Book.new('Math', 'John Doe')
 rental = Rental.new('12-12-2018', book, student)
+teacher = Teacher.new('Math', 34, 'Jane Doe')
 
 puts student
 puts classroom
 puts book
 puts rental
+puts teacher
