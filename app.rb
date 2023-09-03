@@ -16,23 +16,16 @@ class App
   end
 
   def run
-    puts "\n\nWelcome to School Library App!"
     main_menu
     option = gets.chomp.to_i
 
     case option
-    when 1
-      list_books
-    when 2
-      list_people
-    when 3
-      create_person
-    when 4
-      create_book
-    when 5
-      create_rental
-    when 6
-      list_rentals_per_person
+    when 1 then list_books
+    when 2 then list_people
+    when 3 then create_person
+    when 4 then create_book
+    when 5 then create_rental
+    when 6 then list_rentals_per_person
     when 7
       puts "\nThanks for using School Library App!\nGood bye!"
       exit
@@ -228,5 +221,3 @@ class App
     run
   end
 end
-app = App.new
-app.run
