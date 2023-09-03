@@ -204,14 +204,10 @@ class App
   end
 
   def list_rentals_per_person
-    person = select_person_from_list
-    if person.nil?
-      puts "\nPerson not found, please try again.\n\n"
-      sleep 3
-      list_rentals_per_person
-    end
-    puts "\n\nListing rentals for person #{person.name}:\n\n"
-    person.rental.each do |rental|
+    id = select_person_by_id.id
+    rentals = @rentals.select { |rental| rental.person.id == id }
+    puts "\n\nListing rentals for person with ID #{id}:\n\n"
+    rentals.each do |rental|
       puts "Date: #{rental.date}, Book: #{rental.book.title}"
     end
     sleep 3
