@@ -203,6 +203,12 @@ class App
     end
   end
 
+  def select_person_by_id
+    puts "\n\nPlease enter the ID of the person:"
+    id = gets.chomp.to_i
+    person = @people.find { |p| p.id == id }
+  end
+
   def list_rentals_per_person
     id = select_person_by_id.id
     rentals = @rentals.select { |rental| rental.person.id == id }
@@ -213,4 +219,5 @@ class App
     sleep 3
     run
   end
+
 end
