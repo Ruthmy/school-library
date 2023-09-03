@@ -26,13 +26,10 @@ class App
     when 4 then create_book
     when 5 then create_rental
     when 6 then list_rentals_per_person
-    when 7
-      puts "\nThanks for using School Library App!\nGood bye!"
-      exit
     else
-      puts "Invalid option, please try again.\n\n"
+      puts "\nThanks for using School Library App!\nGood bye!"
       sleep 3
-      run
+      exit
     end
   end
 
@@ -40,7 +37,7 @@ class App
 
   # Main menu for the app
   def main_menu
-    puts "\n\nWhat you need to do today?\n\n"
+    puts "\n\nWhat you need to do now?\n\n"
     puts 'Please, select one of the options below:'
     puts '1. List all books.'
     puts '2. List all people.'
@@ -48,7 +45,7 @@ class App
     puts '4. Create a book.'
     puts '5. Create a rental.'
     puts '6. List all rentals for a given person id.'
-    puts "7. Exit \n\nEnter your option: "
+    puts "[Other keys]. Exit \n\nEnter your option: "
   end
 
   # Logic to list all books
