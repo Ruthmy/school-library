@@ -159,7 +159,7 @@ class App
     end
     puts "\n\nListing all books:\n\nPlease enter the ID of the book:"
     @books.each_with_index do |book, index|
-      puts "#{index}. #{book.title} - #{book.author}"
+      puts "#{index}). #{book.title} - #{book.author}"
     end
     puts "\n\nEnter your option:"
     option = gets.chomp.to_i
@@ -172,9 +172,9 @@ class App
       sleep 3
       run
     end
-    puts "\n\nListing all people:\n\nPlease enter the ID of the person:"
+    puts "\n\nListing all people:\n\nPlease enter the number of the person: (not ID)"
     @people.each_with_index do |person, index|
-      puts "#{index}. #{person.id} - Nombre: #{person.name}, Edad: #{person.age}"
+      puts "#{index}). #{person.id} - Nombre: #{person.name}, Edad: #{person.age}"
     end
     puts "\n\nEnter your option:"
     option = gets.chomp.to_i
